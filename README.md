@@ -8,7 +8,7 @@ AngularJS, HTML, CSS/SASS, AngularMaterial, PHP, Gulp
 
 ### For frontend.
 
-Navigate to the folder webpage in your commando-prompt. Print gulp to start gulp process.
+Navigate to the root folder in your commando-prompt. Print gulp to start gulp process.
 
 #### Extras
 
