@@ -1,0 +1,19 @@
+{
+  "name": "eli design",
+  "authors": [
+    "Sandra <info@sandrafilipsson.se>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "^1.5.3"
+  }
+}

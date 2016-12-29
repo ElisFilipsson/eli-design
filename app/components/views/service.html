@@ -1,0 +1,24 @@
+<div layout="column">
+<section class="container service">
+
+  <p class="md-display-1 text-center">Vi erbjuder flertalet tjänster för ert företag, om de så handlar om ett nystartat företag och behöver en grafisk profil till applikationer anpassade för just ert ändamål.</p>
+  
+  <div class="md-padding" layout="row" layout-wrap>
+  <div flex-gt-xs="33" flex="100" layout="column" ng-repeat="service in services">
+        <md-card layout-padding>
+          <md-card-title class="portCard" layout-padding>
+            <md-card-title-media class="md-media-lg card-media service-img">
+                <span><img ng-src="{{service.img}}" alt="{{service.info}}"></img></span>
+            </md-card-title-media>
+          </md-card-title>
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">{{service.name | limitTo:27}}<span ng-if="service.name.length > 27">&hellip;</span></span>
+              <span class="md-subhead">{{service.text}}</span>
+            </md-card-title-text>
+          </md-card-title>
+        </md-card>
+      </div>
+    </div>
+</section>
+</div>

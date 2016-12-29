@@ -1,0 +1,24 @@
+<div layout="column">
+<section class="container service">
+
+    <p class="md-display-1 text-center">Små företag så som stora företag, vi jobbar med alla möjliga företag och branscher. Genom användaranalys, kommunikation och viljan att skapa och förändra ger vi er en lösning för er marknadsföring.</p>
+    
+    <div class="md-padding" layout="row" layout-wrap>
+    <div class="portCard" flex-gt-xs="33" flex="100" layout="column" ng-repeat="product in portfolio">
+      <md-card layout-padding>
+        <md-card-title>
+          <md-card-title-media class="card-media tempImg">
+              <span><img ng-src="{{product.img}}" alt="{{product.info}}"></img></span>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{product.name | limitTo:35}}<span ng-if="product.name.length > 35">&hellip;</span></span>
+            <span class="md-subhead">{{product.text}}</span>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+    </div>
+  </div>
+</section>
+</div>

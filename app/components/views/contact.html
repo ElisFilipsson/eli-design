@@ -1,0 +1,65 @@
+<div layout="column">
+
+<section class="container">
+
+    <p class="md-display-1 text-center">Om ni har frågor eller är intresserade av att veta mer om oss, tveka inte att ta kontakt.</p>
+
+    <form name="userForm" ng-submit="feedbacksubmit()" method="post">
+    <md-content layout-gt-sm="column" layout-gt-md="column" layout-padding>
+            <div layout="row" layout-xs="column" layout-sm="column" layout-align="center" layout-align-gt-sm="space-between">
+
+                    <md-input-container flex-gt-sm="50">
+                        <label>Namn</label>
+                        <input md-minlength="3" md-maxlength="30" required name="name" id="name" ng-model="user.name" />
+
+                        <div ng-messages="userForm.name.$error">
+                            <div ng-message-exp="['required', 'minlength', 'maxlength']">Namnet får inte vara längre än 30 karaktärer eller kortare än 3.</div>
+                        </div>
+                    </md-input-container>
+
+                    <md-input-container flex-gt-sm="50">
+                        <label>Mobilnummer</label>
+                        <input name="phone" id="phone" ng-model="user.phone" required ng-pattern="/^[0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}$/" />
+
+                        <div ng-messages="userForm.phone.$error">
+                            <div ng-message="pattern">### ### ## ## - Var god skriv in ett giltigt mobilnummer enligt mönstret.</div>
+                        </div>
+                    </md-input-container>
+
+            </div>
+            
+            <div layout="row" layout-xs="column" layout-sm="column" layout-align="center">
+                <md-input-container flex-gt-sm="100">
+                    <label>Email</label>
+                    <input name="email" id="email" ng-model="user.email" required minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+
+                    <div ng-messages="userForm.email.$error">
+                        <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                        Din email får endast vara mellan 10 - 100 karaktärer lång och se ut som en emailadress.
+                        </div>
+                    </div>
+                </md-input-container>
+            </div>
+            
+            <div layout="row" layout-xs="column" layout-sm="column" layout-align="center">
+                <md-input-container flex-gt-sm="100">
+                    <label>Meddelande:</label>
+                    <input md-minlength="3" md-maxlength="500" required name="message" id="message" ng-model="user.message" />
+
+                    <div ng-messages="userForm.message.$error">
+                        <div ng-message-exp="['required', 'minlength', 'maxlength']">Meddelandet får inte vara längre än 500 karaktärer eller kortare än 3.</div>
+                    </div>
+                </md-input-container>
+            </div>
+
+
+
+            <div layout="row" layout-align="end">
+                <md-button type="submit" class="md-raised">Skicka</md-button>
+            </div>
+        
+    </md-content>
+    </form>
+</section>
+
+</div>

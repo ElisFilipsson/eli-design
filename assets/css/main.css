@@ -1,0 +1,200 @@
+body, .view {
+  font-family: "Bebas neue", Helvetica, Arial, sans-serif;
+  background-color: whitesmoke;
+}
+view {
+  height: 100%;
+  max-height: 1000%;
+}
+p {
+  font-size: 22pt;
+}
+a {
+  color: black !important;
+  text-decoration: none;
+}
+a:hover {
+  color: #656C69 !important;
+}
+img {
+  border: none;
+}
+.md-black {
+  background-color: #24242D !important;
+  color: #DADAD8;
+}
+.md-darkgrey {
+  background-color: #4D4545 !important;
+  color: #DADAD8;
+}
+.md-grey {
+  background-color: #656C69 !important;
+  color: #DADAD8;
+}
+.md-purplegrey {
+  background-color: #B2A1A1 !important;
+  color: #DADAD8;
+}
+.md-lightgrey {
+  background-color: #94938F !important;
+  color: #DADAD8;
+}
+.text-center {
+   text-align: center;
+ }
+ .sub-menu-text{
+   margin-top: 0px;
+   margin-left: 10px;
+   padding-top: 0px;
+ }
+/*________________________________________________FOR START.HTML */
+.container {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  min-height: 50%;
+  padding: 20px;
+  background-color:rgba(119, 136, 153, 0.4);
+}
+.container div div:nth-child(2) div:nth-child(1) div:nth-child(1) img{ 
+  width: 100%;
+}
+.container div div:nth-child(2) div:nth-child(1) div:nth-child(2) li{ 
+  padding-left:10px;
+}
+.container div div:nth-child(2) div:nth-child(2) div:nth-child(4) img{ 
+  width: 100%;
+}
+.container div div:nth-child(2) div:nth-child(2) div:nth-child(4){ 
+    margin-bottom: 20px;
+  }
+  .container div div:nth-child(2) div:nth-child(2) div{ 
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom:20px;
+  }
+  .container div div:nth-child(2) div:nth-child(1) div{ 
+    margin-right: 0px;
+    margin-top: 20px;
+    margin-bottom:20px;
+  }
+@media screen and (min-width: 960px) {
+  .container div div:nth-child(2) div:nth-child(2) div{ 
+    margin-left: 10px;
+  }
+  .container div div:nth-child(2) div:nth-child(1) div{ 
+    margin-right: 10px;
+  }
+}
+/*________________________________________________FOR SERVICE.HTML */
+
+.pic-text {
+  padding: 30px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.text-center {
+  text-align: center;
+}
+header {
+  width: 100%;
+  top: 0px;
+  position: fixed;
+}
+footer {
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+footer a{
+  color: #DADAD8 !important;
+}
+footer img, .img-nav {
+  width: 200px;
+}
+.service-img{
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.service-img img{
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+}
+.md-sidenav-right {
+    position: fixed;
+}
+md-backdrop {
+    background-color: transparent !important;
+}
+@media screen and (max-width: 960px) {
+  footer {
+   margin-top:900px;
+  }
+}
+@media screen and (max-width: 860px) {
+  footer {
+   margin-top:800px;
+  }
+}
+@media screen and (max-width: 760px) {
+  footer {
+   margin-top:700px;
+  }
+}
+@media screen and (max-width: 660px) {
+  footer {
+   margin-top:600px;
+  }
+}
+@media screen and (max-width: 560px) {
+  footer {
+   margin-top:500px;
+  }
+}
+.text {
+  padding: 20px;
+}
+.logo {
+  font-family: "Helvetica neue", Helvetica, Arial, sans-serif;
+}
+.material-icons {
+  font-size: 32pt;
+}
+.close {
+  font-size: 26pt;
+}
+.icons {
+  font-size: 12pt;
+  padding-right: 10px;
+}
+.subnav {
+  padding-left: 20px;
+}
+table tr {
+  margin-bottom: 10px;
+}
+/*________________________________________________FOR MENU */
+
+.zIndex50{
+  z-index: 59;
+}
+
+/*________________________________________________FOR PORTFOLIO.html */
+.portCard{
+    /*border: 1px solid #B2A1A1;*/
+    max-width:400px;
+}
+.tempImg{
+  background-color: black;
+  width: 400px;
+}
+.tempImg img{
+  display: block;
+  border: none;
+  height: auto !important;
+}
+
+    

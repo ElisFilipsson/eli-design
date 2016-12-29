@@ -1,0 +1,118 @@
+<html>
+  <head>
+  <title ng-bind="pageTitle"></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="Sandra Filipsson">
+  <meta name="description" content="eli designbyrå. Vi finns i Malmö och är det lilla gedigna företaget som utvecklar design i både tryckt och digital form. Vår bakgrund är inom grafisk design och frontend utveckling. Vi utvecklar allt från applikationer för stora företag till grafiskt tryckmaterial för det mindre företaget.">
+<meta name="keywords" content="HTML,CSS,XML,JavaScript,eli designbyrå,illustration,webbdesign,tryck,reklam,logotyp,varumärke,sandra filipsson,kommunikation,grafiskt,responsiv,design,mobil,node.js,angular.js,php,angular material">
+<meta name="robots" content="noindex,nofollow" >
+
+<link
+    rel='shortcut icon'
+    href='assets/img/icon/eli.ico'> 
+
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  </head>
+  
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular-route.js"></script>
+  <script type="text/javascript" src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+  <script src="//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js" type="text/javascript"> </script>
+  
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+  <!-- app's js -->
+  <script src="app/app.module.js"></script>
+  <script src="app/app.routes.js"></script>
+  <script src="app/controllers/contact.js"></script>
+  <script src="app/controllers/nav.js"></script>
+  <script src="app/controllers/portfolio.js"></script>
+  <script src="app/controllers/service.js"></script>
+
+    <body ng-app="app" ng-cloak ng-controller="NavCtrl">
+      <header class="zIndex50">
+    <md-toolbar class="md-black" layout-padding>
+        <div class="md-toolbar-tools">
+            <span>
+                <img layout-padding class="img-nav" src="assets/img/logo.svg"></img>
+            </span>
+            <!-- fill up the space between left and right area -->
+            <span flex></span>
+            <span ng-click="toggleRight()" ng-hide="isOpenRight()" class="material-icons">menu</span>
+        </div>
+    </md-toolbar>
+</header>
+
+<div>
+<section>
+<md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
+    <md-toolbar class="md-purplegrey" layout-padding>
+        <div class="md-toolbar-tools">
+            <span>
+                <img class="img-nav" layout-padding src="assets/img/logo.svg"></img>
+                </span>
+            <span flex></span>
+            <span ng-click="close()" class="material-icons close">close</span>
+        </div>
+    </md-toolbar>
+    <md-content layout-padding>
+        <table>
+            <tr>
+                <td layout-padding>
+                    <span ng-class="{ aktiv: isActive('/about') || !isActive('/about')}" class="md-headline"><a ui-sref="/about" ui-sref-opts="{reload: true}" ng-click="close()">Om</a></span>
+                    <p class="md-subhead sub-menu-text">En kort beskrivning om vilka vi är och vad som ligger oss nära om hjärtat.</p>
+                </td>
+            </tr>
+            <tr>
+                <td layout-padding>
+                   <span ng-class="{ aktiv: isActive('/services')}" class="md-headline"><a ui-sref="/services" ui-sref-opts="{reload: true}" ng-click="close()">Tjänster</a></span>
+                   <p class="md-subhead sub-menu-text">Strategi, Design, Varumärke, Tryckmaterial, Responsiva hemsidor, Applikationer</p>
+                </td>
+            </tr>
+            <tr>
+                <td layout-padding>
+                    <span ng-class="{ aktiv: isActive('/portfolio')}" class="md-headline"><a ui-sref="/portfolio" ui-sref-opts="{reload: true}" ng-click="close()">Portfolio</a></span>
+                    <p class="md-subhead sub-menu-text">Vad det lilla företaget eli design har gjort.</p>
+                </td>
+            </tr>
+            <tr>
+                <td layout-padding>
+                    <span ng-class="{ aktiv: isActive('/contact')}" class="md-headline"><a ui-sref="/contact" ui-sref-opts="{reload: true}" ng-click="close()">Kontakt</a></span>
+                    <p class="md-subhead sub-menu-text">Tveka inte att ta kontakt. Vi svarar så snabbt vi kan.</p>
+                </td>
+            </tr>
+        </table>
+    </md-content>
+</md-sidenav>
+</section>
+</div>
+<section class="view">
+    <div ui-view></div>
+<section>
+
+<footer class="md-black" layout="row">
+    
+            <div class="md-subhead">
+                <span class="md-title">Kontakta oss:</span>
+                <br><i class="material-icons icons">phone</i><a href="tel:0706340868">00 46 (0)706 34 08 68</a>,
+                <br><i class="material-icons icons">mail</i><a href="mailto:info@sandrafilipsson.se">info@sandrafilipsson.se</a>
+            </div>
+            <span flex> </span>
+            <img layout-padding src="assets/img/logo.svg"></img>
+
+</footer>
+</body>
+
+</html>
